@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 </title>
+</head>
+<body>
+    <h1>This will display a table of random numbers using php enbedded in the html document</h1>
+    <table border="1">
+        <tr>
+            <th>Number</th>
+            <th>Square</th>
+            <th>Square Root</th>
+        </tr>
+        <?php
+            for($i = 0; $i < 10; $i++){
+                $num = rand(1,100);
+                echo "<tr>";
+                echo "<td>$num</td>";
+                echo "<td>".$num*$num."</td>";
+                echo "<td>".sqrt($num)."</td>";
+                echo "</tr>";
+            }
+        ?>
+    </table>
+</body>
+</html>
